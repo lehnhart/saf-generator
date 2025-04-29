@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSpace SAF Generator</title>
+</head>
+<body>
+    <h1>Gerar Arquivo DSpace SAF</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Arquivo CSV:</label><br>
+        <input type="file" name="csv_file" required><br><br>
+
+        <label>Arquivos PDF:</label><br>
+        <input type="file" name="pdf_files" multiple required><br><br>
+
+        <input type="submit" value="Gerar SAF">
+    </form>
+</body>
+</html>
