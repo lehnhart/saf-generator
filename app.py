@@ -2,22 +2,12 @@ import os
 import shutil
 import tempfile
 import zipfile
-from flask import Flask, request, send_file, render_template_string
+from flask import Flask, request, send_file, render_template
 import pandas as pd
 from lxml import etree
 
 app = Flask(__name__)
 
-UPLOAD_HTML = """
-<!doctype html>
-<title>Gerar DSpace SAF</title>
-<h1>Upload do CSV e PDFs</h1>
-<form method=post enctype=multipart/form-data>
-  Arquivo CSV: <input type=file name=csv><br><br>
-  Arquivos PDF: <input type=file name=pdfs multiple><br><br>
-  <input type=submit value=Gerar SAF>
-</form>
-"""
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_files():
@@ -28,7 +18,7 @@ def upload_files():
 
         try:
             if 'csv' not in request.files or 'pdfs' not in request.files:
-                return 'Arquivo CSV e PDFs são obrigatórios.', 400
+                return 'Arquivo CSV e PDF são obrigatórios.', 400
 
             csv_file = request.files['csv']
             pdf_files = request.files.getlist('pdfs')
@@ -111,7 +101,7 @@ def upload_files():
         finally:
             shutil.rmtree(temp_dir, ignore_errors=True)
 
-    return render_template_string(UPLOAD_HTML)
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

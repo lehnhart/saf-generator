@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DSpace SAF Generator</title>
-</head>
-<body>
-    <h1>Gerar Arquivo DSpace SAF</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <label>Arquivo CSV:</label><br>
-        <input type="file" name="csv_file" required><br><br>
-
-        <label>Arquivos PDF:</label><br>
-        <input type="file" name="pdf_files" multiple required><br><br>
-
-        <input type="submit" value="Gerar SAF">
-    </form>
-</body>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerar DSpace SAF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h1 class="card-title text-center mb-4">Gerar SAF para DSpace</h1>
+              <form method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="csv" class="form-label">Arquivo CSV</label>
+                  <input class="form-control" type="file" name="csv" id="csv" required>
+                </div>
+                <div class="mb-3">
+                  <label for="pdfs" class="form-label">Arquivos PDF</label>
+                  <input class="form-control" type="file" name="pdfs" id="pdfs" multiple required>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Gerar SAF</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
