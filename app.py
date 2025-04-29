@@ -58,8 +58,16 @@ def upload_files():
                     if qualifier:
                         attribs['qualifier'] = qualifier
 
+                    '''
                     elem = etree.SubElement(dc_root, 'dcvalue', **attribs)
                     elem.text = str(row[col])
+                    '''
+                    valores = str(row[col]).split('||')
+                    for valor in valores:
+                        valor = valor.strip()
+                        if valor:
+                            elem = etree.SubElement(dc_root, 'dcvalue', **attribs)
+                            elem.text = valor
 
                 dublin_core_path = os.path.join(item_dir, 'dublin_core.xml')
                 tree = etree.ElementTree(dc_root)
