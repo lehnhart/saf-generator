@@ -26,6 +26,18 @@
                   <button type="submit" class="btn btn-primary">Gerar SAF</button>
                 </div>
               </form>
+              <hr class="my-4">
+              <h2 class="text-center mb-3">Instruções</h2>
+              <p>Para gerar o SAF, faça o upload de um arquivo CSV contendo os metadados dos documentos e dos arquivos PDF correspondentes.</p>
+              <p>Os arquivos PDF devem ter os nomes correspondentes aos especificados no campo <code>filename</code> do arquivo CSV.</p>
+              <p>O arquivo CSV deve ser salvo no formato UTF-8, utilizando a vírgula ( , ) como separador. Não utilizar ponto-e-vírgula ( ; ).</p>
+              <p>Caso algum campo contenha mais de uma informação, coloque todas as informações entre aspas duplas e separe os campos com duplo pipe → || .</p>
+              <p><strong>Exemplo campo dc.creator:</strong> "Primeiro Autor||Segundo Autor||Terceiro Autor"</p>
+              <p>Caso algum campo contenha vírgula ( , ) em sua descrição, coloque toda a descrição entre aspas duplas.</p>
+              <p><strong>Exemplo campo dc.description.abstract:</strong> "Veja, um exemplo a ser seguido para o campo de abstract."</p>
+              <p>Após o envio, o sistema processará os arquivos e gerará o SAF necessário para importação no DSpace.</p>
+              <hr>
+              <p class="text-center"><a href="https://github.com/lehnhart/saf-generator" target="_blank">Projeto no GitHub</a></p>
             </div>
           </div>
         </div>
