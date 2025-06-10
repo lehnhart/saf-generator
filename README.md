@@ -2,6 +2,8 @@
 
 Este é um aplicativo Flask que gera arquivos no formato Simple Archive Format (SAF), que possibilita realizar a importação em lote no [Aplicativo DSpace](https://dspace.org/).
 
+Acesse o aplicativo: [Aplicativo SAF Generator Web](https://saf.waydigital.com.br)
+
 Veja mais na [Documentação DSpace](https://wiki.lyrasis.org/display/DSDOC8x/Importing+and+Exporting+Items+via+Simple+Archive+Format)
 
 ## Requisitos
